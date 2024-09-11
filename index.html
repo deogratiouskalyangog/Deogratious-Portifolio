@@ -2461,7 +2461,22 @@
                     <div class="corners__top"></div>
                     <div class="hero-row">
                       <div class="footer-form w-form">
-                        <form
+                        <style>
+                          .form-input__w {
+                            margin-bottom: 16px; /* Adjust spacing as needed */
+                          }
+                        
+                          .form-input__label {
+                            margin-bottom: 8px; /* Spacing between the label and input */
+                          }
+                        
+                          .form-input__field {
+                            width: 100%; /* Ensure the input fields stretch to the container's width */
+                            box-sizing: border-box; /* Include padding and border in the element’s total width and height */
+                          }
+                        </style>
+                        
+                        <form 
                           id="email-form"
                           name="email-form"
                           data-name="Contact Form"
@@ -2475,10 +2490,8 @@
                             <label
                               for="email"
                               class="form-input__label h-large pointer-none"
-                              >Youremail<span class="is--alt"
-                                >@gmail.com</span
-                              ></label
-                            ><input
+                            >Your email<span class="is--alt">@gmail.com</span></label>
+                            <input
                               class="form-input__field h-large w-input"
                               maxlength="256"
                               name="email"
@@ -2489,24 +2502,77 @@
                               required=""
                             />
                           </div>
-                          <div class="form-input__w"></div>
+                          
+                          <div class="form-input__w">
                             <label
-                              for="email"
+                              for="message"
                               class="form-input__label h-large pointer-none"
-                              >Youremail<span class="is--alt"
-                                >@gmail.com</span
-                              ></label
-                            ><input
+                            >Message</label>
+                            <textarea
                               class="form-input__field h-large w-input"
-                              maxlength="256"
-                              name="email"
-                              data-name="Email"
+                              name="message"
+                              data-name="Message"
                               placeholder=""
-                              type="email"
-                              id="email"
+                              id="message"
+                              required=""
+                            ></textarea>
+                          </div>
+                        
+                          <div class="form-input__w">
+                            <label
+                              for="budget"
+                              class="form-input__label h-large pointer-none"
+                            >Project Budget </label>
+                            <input
+                              class="form-input__field h-large w-input"
+                              name="budget"
+                              data-name="Budget"
+                              placeholder=""
+                              type="text"
+                              id="budget"
                               required=""
                             />
                           </div>
+                        
+                          <div class="form-input__w">
+                            <label
+                              for="scope"
+                              class="form-input__label h-large pointer-none"
+                            >Requirements</label>
+                            <textarea
+                              class="form-input__field h-large w-input"
+                              name="scope"
+                              data-name="Scope"
+                              placeholder=""
+                              id="scope"
+                              required=""
+                            ></textarea>
+                          </div>
+                        
+                          <div class="form-input__w">
+                            <label
+                              for="technical-specifications"
+                              class="form-input__label h-large pointer-none"
+                            >Technical Specifications</label>
+                            <select
+                              class="form-input__field h-large w-input"
+                              name="technical-specifications"
+                              data-name="Technical Specifications"
+                              id="technical-specifications"
+                              required=""
+                            >
+                              <option value="">Select an option</option>
+                              <option value="JavaScript">JavaScript</option>
+                              <option value="Python">Python</option>
+                              <option value="Java">Java</option>
+                              <option value="C++">C++</option>
+                              <option value="Ruby">Ruby</option>
+                              <option value="Other">Other</option>
+                            </select>
+                          </div>
+                        
+                          
+                        
                           <input
                             type="submit"
                             data-wait="Please wait..."
@@ -2515,6 +2581,7 @@
                             value="Submit"
                           />
                         </form>
+                        
                         <div class="form-success__w w-form-done">
                           <div class="p-large is--grey">
                             Thank you! I&#x27;ll be in touch soon
